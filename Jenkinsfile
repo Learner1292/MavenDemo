@@ -36,7 +36,7 @@ pipeline {
 
         withSonarQubeEnv('SonarQube-Server') {
           sh '''
-                    mvn sonar:sonar \
+                    mvn org.sonarsource.scanner.maven:sonar-maven-plugin:5.1.0.4751:sonar \
                     -Dsonar.projectKey=maven-demo \
                     -Dsonar.projectName=MavenDemo
                     '''
